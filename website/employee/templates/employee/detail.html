@@ -1,0 +1,51 @@
+{% extends 'employee/base.html' %}
+<title>{% block title %}ประวัติ{% endblock %}</title>
+{% block body %}
+    <br>
+<div class="container">
+    <div class="p-3 mb-2  text-danger">
+        <center>
+            <h2>
+                ชื่อ :  {{ employee.firstName }}
+                นามสกุล : {{ employee.lastName }}
+                ตำแหน่ง : {{ employee.position }}
+            </h2>
+        </center>
+    </div>
+
+  <div class="row">
+    <div class="col"> <br>
+        <div class="p-3 mb-2  text-white">
+        <center>
+            <h1>ประวัติ</h1>
+        </center>
+            <br>
+        </div>
+    <p class="text-white">
+        ชื่อ : {{ employee.firstName }}<br>
+        นามสกุล : {{ employee.lastName }}<br>
+        ชื่อเล่น : {{ employee.nickName }}<br>
+        เบอร์โทรศัพท์ : {{ employee.phoneNumber }} <br>
+        ตำแหน่ง : {{ employee.position }} <br>
+        สร้างเมื่อ : {{ employee.create_at }} <br>
+        อัปเดตเมื่อ : {{ employee.update_at }} <br>
+        ออกจาก : {{ employee.leave }} <br>
+        ประเภท : {{ employee.type }} <br>
+        สาเหตุ : {{ employee.reason }} <br>
+        เริ่มทำงาน : {{ employee.startDate }} <br>
+        เริ่มเวลา: {{ employee.startTime }} <br>
+        เริ่มวันที่ : {{ employee.endDate }} <br>
+        เริ่มเวลาที่ : {{ employee.endTime }} <br>
+        เริ่มสร้าง : {{ employee.create_at1 }} <br>
+        อัปเดตเมื่อ: {{ employee.update_at2 }} <br></p>
+        <br>
+        <a class="btn btn-secondary" href="{% url 'employee:employee-update' employee.id %}">แก้ไขข้อมูล</a>
+        <a class="btn btn-info" href="{% url 'employee:index' %}">ย้อนกลับ</a><br><br>
+
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

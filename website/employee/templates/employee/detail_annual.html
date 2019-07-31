@@ -1,0 +1,20 @@
+{% extends 'employee/base.html' %}
+{% block body %}
+<title>{% block title %}ประวัติการลา{% endblock %}</title>
+<div class="container">
+<div class="p-3 mb-2  text-danger"><br>
+     <center> <h1>ประวัติลาพักร้อน</h1></center><br>
+<p class="text-white">
+ชื่อ : {{ annual.employee }}<br>
+สาเหตุ : {{ annual.reason }}<br>
+วันที่ขอ : {{ annual.startDate }}<br>
+เวลาที่ขอ : {{ annual.startTime }}<br>
+สิ้นสุดวันที่ : {{ annual.endDate }}<br>
+สิ้นสุดเวลาที่ : {{ annual.endTime }}<br>
+</p>
+     <a class="btn btn-secondary" href="{% url 'employee:annual-update' annual.id %}">แก้ไขข้อมูล</a>
+    <a class="btn btn-info" href="{% url 'employee:index3' %}">ย้อนกลับ</a><br><br>
+</div>
+</div>
+
+{% endblock %}

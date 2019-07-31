@@ -1,0 +1,24 @@
+{% extends 'employee/base.html' %}
+{% block body %}
+<title>{% block title %}รายชื่อพนักงาน{% endblock %}</title>
+<div class="container">
+
+<br>
+<div class="p-3 mb-2  text-danger">
+    <center> <h1>รายชื่อพนักงานทั้งหมด</h1></center><br><br>
+     </div>
+    {% if all_employee %}
+    {% for employee in all_employee %}
+    <a class="text-primary" href="{% url 'employee:detail' employee.id %}"><h3>{{ employee.firstName }} - {{employee.lastName}}</h3></a><br>
+    <form action="{% url 'employee:employee-delete' employee.id %}" method="post">
+            {% csrf_token %}
+        <button type="submit" class="btn btn-danger">ลบรายชื่อ</button>
+    </form><br>
+    {% endfor %}
+    {% else %}
+    <h3>ไม่มีรายชื่อในระบบ</h3>
+    {% endif %}
+
+</div>
+
+{% endblock %}

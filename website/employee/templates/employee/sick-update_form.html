@@ -1,0 +1,17 @@
+{% extends 'employee/base.html' %}
+
+{% block body %}
+
+<br>
+<div class="container">
+    <div class="p-3 mb-2  text-danger">
+    <center><h1>อัปเดต</h1></center>
+    </div>
+<form method="post">{% csrf_token %}
+    {% include 'employee/form-template.html' %}
+    <br><button type="submit" class="btn btn-success">Save</button>
+    <a class="btn btn-secondary" href="{% url 'index2.html' %}">Cancel</a>
+</form><br>
+
+</div>
+{% endblock %}

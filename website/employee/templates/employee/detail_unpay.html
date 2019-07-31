@@ -1,0 +1,20 @@
+{% extends 'employee/base.html' %}
+{% block body %}
+<title>{% block title %}ประวัติการลา{% endblock %}</title>
+<div class="container">
+<div class="p-3 mb-2  text-danger"><br>
+     <center> <h1>ประวัติลาป่วย</h1></center><br>
+<p class="text-white">
+ชื่อ : {{ unpay.employee }}<br>
+สาเหตุ : {{ unpay.reason }}<br>
+วันที่ขอ : {{ unpay.startDate }}<br>
+เวลาที่ขอ : {{ unpay.startTime }}<br>
+สิ้นสุดวันที่ : {{ unpay.endDate }}<br>
+สิ้นสุดเวลาที่ : {{ unpay.endTime }}<br>
+</p>
+    <a class="btn btn-secondary" href="{% url 'employee:unpay-update' unpay.id %}">แก้ไขข้อมูล</a>
+    <a class="btn btn-info" href="{% url 'employee:index4' %}">ย้อนกลับ</a><br><br>
+</div>
+</div>
+
+{% endblock %}

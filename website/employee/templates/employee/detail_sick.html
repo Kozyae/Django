@@ -1,0 +1,20 @@
+{% extends 'employee/base.html' %}
+{% block body %}
+<title>{% block title %}ประวัติการลา{% endblock %}</title>
+<div class="container">
+<div class="p-3 mb-2  text-danger"><br>
+     <center> <h1>ประวัติลาป่วย</h1></center><br>
+<p class="text-white">
+ชื่อ : {{ sick.employee }}<br>
+สาเหตุ : {{ sick.reason }}<br>
+วันที่ขอ : {{ sick.startDate }}<br>
+เวลาที่ขอ : {{ sick.startTime }}<br>
+สิ้นสุดวันที่ : {{ sick.endDate }}<br>
+สิ้นสุดเวลาที่ : {{ sick.endTime }}<br>
+</p>
+     <a class="btn btn-secondary" href="{% url 'employee:sick-update' sick.id %}">แก้ไขข้อมูล</a>
+    <a class="btn btn-info" href="{% url 'employee:index2' %}">ย้อนกลับ</a><br><br>
+</div>
+</div>
+
+{% endblock %}
