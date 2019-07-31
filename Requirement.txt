@@ -1,0 +1,107 @@
+﻿
+admin
+summercool
+
+
+สร้าง Web application สำหรับบันทึกข้อมูลการลาของพนักงานโดยมีความสามารถดังนี้
+    
+1. จัดการการพนักงาน มี 4 หน้า
+        
+1. หน้าเพิ่มพนักงาน มี input ดังนี้
+            
+- firstName
+            
+- lastName
+            
+- nickName
+            
+- phoneNumber
+            
+- position
+        
+2. หน้าสำหรับแสดงรายชื่อพนักงานทั้งหมด
+        
+3. หน้าสำหรับอัพเดทข้อมูลพนักงาน
+        
+4. หน้าสำหรับลบข้อมูลพนักงาน
+
+
+    
+2. จัดการการลา มี 4 หน้า
+        
+1. หน้าเพิ่มการลา มี input ดังนี้
+            
+- type เป็น dropdown การลา 3 แบบ [sick,annual,unpay]
+            
+- reason
+            
+- startDate
+            
+- startTime
+            
+- endDate
+            
+- endTime
+            
+- employee เป็น dropdown รายชื่อพนักงานทั้งหมดใน table employee
+        
+2. หน้าสำหรับแสดงการลาทั้งหมด
+        
+3. หน้าสำหรับอัพเดทข้อมูลการลา
+        
+4. หน้าสำหรับลบข้อมูลการลา
+
+
+
+
+Database มี 2 table ดังนี้
+    
+employee
+        
+firstName
+        
+lastName
+        
+nickName    
+       
+phoneNumber
+        
+position
+        
+create_at
+       
+update_at
+    
+leave
+        
+type
+ 
+reason
+        
+startDate
+        
+startTime
+        
+endDate
+        
+endTime
+        
+create_at
+        
+update_at
+        
+
+employee <ทำ relation กับ table employee>
+
+
+หมายเหตุ
+    ใช้ภาษา Python ในการพัฒนา
+    ใช้ framwork Django 
+เวอร์ชั่น 2.2 ตาม ref 
+ด้านล่าง 
+
+Ref
+    
+Django
+       
+https://docs.djangoproject.com/en/2.2/
